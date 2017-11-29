@@ -1,3 +1,6 @@
 [submodule "cm-makefile"]
 	path = cm-makefile
 	url = https://github.com/adamheinrich/cm-makefile.git
+[submodule "stm32-libopencm3/libopencm3"]
+	path = stm32-libopencm3/libopencm3
+	url = git@github.com:libopencm3/libopencm3.git
