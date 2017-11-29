@@ -26,7 +26,8 @@ DEF = -DNRF52 \
       -DCONFIG_GPIO_AS_PINRESET
 
 # CPU architecture
-ARCHFLAGS = -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+ARCHFLAGS = -mcpu=cortex-m4
+FPFLAGS = -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
 include ../cm-makefile/common.mk
 include jlink.mk
