@@ -16,6 +16,9 @@ SRC_LD = $(CUBE_DIR)/Projects/STM32F030R8-Nucleo/Templates/TrueSTUDIO/STM32F030R
 # Defines required by included libraries
 DEF = -DSTM32F030x8
 
+# OpenOCD setup
+OPENOCD ?= openocd -f board/st_nucleo_f0.cfg
+
 include ../cm-makefile/common.mk
 include ../cm-makefile/openocd.mk
 
