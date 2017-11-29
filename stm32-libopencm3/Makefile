@@ -24,8 +24,8 @@ DEPS_CLEAN = libopencm3_clean
 
 include ../cm-makefile/common.mk
 include ../cm-makefile/openocd.mk
-include libopencm3.mk    # Builds libopencm3
-include libopencm3_ld.mk # Generates linker script
+include ../cm-makefile/libopencm3.mk    # Builds libopencm3
+include ../cm-makefile/libopencm3_ld.mk # Generates linker script
 
 # Setup linker flags required by libopencm3
 LDFLAGS += -l$(subst lib,,$(subst .a,,$(OPENCM3_LIB)))
