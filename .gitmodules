@@ -4,3 +4,6 @@
 [submodule "stm32-libopencm3/libopencm3"]
 	path = stm32-libopencm3/libopencm3
 	url = git@github.com:libopencm3/libopencm3.git
+[submodule "1bitsy/libopencm3"]
+	path = 1bitsy/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
