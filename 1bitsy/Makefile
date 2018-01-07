@@ -22,7 +22,8 @@ SRC_LD = $(BUILD_DIR)/$(OPENCM3_DEVICE).ld
 # Black Magic Probe setup (optional):
 #BLACKMAGIC_PORT = /dev/ttyACM0
 
-include ../cm-makefile/common.mk
+include ../cm-makefile/config.mk
 include ../cm-makefile/blackmagic.mk
 include ../cm-makefile/libopencm3.mk    # Builds libopencm3
 include ../cm-makefile/libopencm3_ld.mk # Generates linker script
+include ../cm-makefile/rules.mk

@@ -18,7 +18,8 @@ SRC_LD = $(BUILD_DIR)/$(OPENCM3_DEVICE).ld
 # OpenOCD setup
 OPENOCD ?= openocd -f board/st_nucleo_f0.cfg
 
-include ../cm-makefile/common.mk
+include ../cm-makefile/config.mk
 include ../cm-makefile/openocd.mk
 include ../cm-makefile/libopencm3.mk    # Builds libopencm3
 include ../cm-makefile/libopencm3_ld.mk # Generates linker script
+include ../cm-makefile/rules.mk

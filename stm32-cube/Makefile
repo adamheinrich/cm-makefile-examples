@@ -19,8 +19,9 @@ DEF = -DSTM32F030x8
 # OpenOCD setup
 OPENOCD ?= openocd -f board/st_nucleo_f0.cfg
 
-include ../cm-makefile/common.mk
+include ../cm-makefile/config.mk
 include ../cm-makefile/openocd.mk
+include ../cm-makefile/rules.mk
 
 # Disable GCC warnings which are triggered by the STM32CubeF0 SDK
 WARNFLAGS += -Wno-undef -Wno-conversion

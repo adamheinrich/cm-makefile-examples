@@ -29,8 +29,10 @@ DEF = -DNRF51 \
       -DNRF51422 \
       -DBOARD_$(BOARD)
 
-include ../cm-makefile/common.mk
+include ../cm-makefile/config.mk
 include jlink.mk
+include ../cm-makefile/rules.mk
+
 
 # Disable GCC warnings which are triggered by the nRF5 SDK
 WARNFLAGS += -Wno-pedantic -Wno-undef -Wno-sign-conversion -Wno-unused-parameter
