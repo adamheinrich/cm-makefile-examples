@@ -1,6 +1,7 @@
 DIRS := 1bitsy
 DIRS += nrf51 nrf52
-DIRS += stm32-cube stm32-libopencm3
+DIRS += stm32-cube stm32-cube-nohal
+DIRS += stm32-libopencm3
 
 .PHONY: all
 all: $(DIRS:=.build)

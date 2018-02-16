@@ -1,22 +1,27 @@
 #include <stm32f0xx.h>
 #include "stm32f0xx_it.h"
 
-#define LED_PIN 5
-
 void SysTick_Handler(void)
 {
-	/* Toggle GPIO pin PA5: */
-	GPIOA->ODR ^= (1U << LED_PIN);
+	HAL_IncTick();
 }
 
 int main(void)
 {
-	/* Enable clock for GPIOA and set GPIO pin PA5 as output: */
-	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
-	GPIOA->MODER |= (1U << (2 * LED_PIN));
+	HAL_Init();
 
-	/* Initialize SysTick to generate an interrupt every half-second: */
-	SysTick_Config(SystemCoreClock / 2);
+	__HAL_RCC_GPIOA_CLK_ENABLE();
 
-	while (1);
+	GPIO_InitTypeDef gpio_init = {
+		.Pin = GPIO_PIN_5,
+		.Mode = GPIO_MODE_OUTPUT_PP,
+		.Pull = GPIO_PULLUP,
+		.Speed = GPIO_SPEED_HIGH,
+	};
+	HAL_GPIO_Init(GPIOA, &gpio_init);
+
+	while (1) {
+		HAL_Delay(500);
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	}
 }
