@@ -37,7 +37,7 @@ reset:
 	q\n" | $(JLINK_EXE)
 
 .PHONY: gdb
-gdb: $(BUILD_DIR)/$(PROJ).hex
+gdb: $(BUILD_DIR)/$(BIN).hex
 	@echo "Starting GDB server"
 	$(CMD_ECHO) $(JLINK_GDB) -if SWD -speed 1000 -device $(JLINK_TARGET)
 
