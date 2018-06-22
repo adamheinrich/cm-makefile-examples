@@ -16,7 +16,6 @@ int main(void)
 		.Pin = GPIO_PIN_5,
 		.Mode = GPIO_MODE_OUTPUT_PP,
 		.Pull = GPIO_PULLUP,
-		.Speed = GPIO_SPEED_HIGH,
 	};
 	HAL_GPIO_Init(GPIOA, &gpio_init);
 
