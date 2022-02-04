@@ -4,3 +4,6 @@
 [submodule "thirdparty/libopencm3"]
 	path = thirdparty/libopencm3
 	url = https://github.com/libopencm3/libopencm3.git
+[submodule "thirdparty/STM32CubeF0"]
+	path = thirdparty/STM32CubeF0
+	url = https://github.com/STMicroelectronics/STM32CubeF0.git

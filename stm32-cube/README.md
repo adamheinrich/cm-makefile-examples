@@ -1,4 +1,7 @@
-Download the [STM32Cube][1] library for your MCU and unpack it into directory
-``STM32Cube_FW_XX_Vx.x.x``.
+The [STM32Cube][1] library is included as a submodule. It is compiled
+automatically when running `make`. However, it needs to be initialized first:
 
-[1]: http://www.st.com/web/catalog/tools/FM147/CL1794/SC961/SS1743/LN1897
+	git submodule update --init
+	make
+
+[1]: https://github.com/STMicroelectronics/STM32CubeF0
