@@ -23,3 +23,13 @@ include ../cm-makefile/openocd.mk
 include ../cm-makefile/libopencm3.mk    # Builds libopencm3
 include ../cm-makefile/libopencm3_ld.mk # Generates linker script
 include ../cm-makefile/rules.mk
+
+# OpenOCD-specific target
+.PHONY: erase
+erase:
+	$(CMD_ECHO) $(OPENOCD) -c \
+	"init; \
+	reset halt; \
+	sleep 100; \
+	stm32f1x mass_erase 0; \
+	shutdown"

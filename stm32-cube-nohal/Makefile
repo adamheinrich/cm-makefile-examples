@@ -25,3 +25,13 @@ include ../cm-makefile/rules.mk
 
 # Disable GCC warnings which are triggered by the STM32CubeF0 SDK
 WARNFLAGS += -Wno-undef -Wno-conversion
+
+# OpenOCD-specific target
+.PHONY: erase
+erase:
+	$(CMD_ECHO) $(OPENOCD) -c \
+	"init; \
+	reset halt; \
+	sleep 100; \
+	stm32f1x mass_erase 0; \
+	shutdown"
