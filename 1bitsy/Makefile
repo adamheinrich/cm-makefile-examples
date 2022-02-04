@@ -2,7 +2,7 @@
 BIN = 1bitsy
 
 # Include paths
-OPENCM3_DIR = ./libopencm3
+OPENCM3_DIR = ../thirdparty/libopencm3
 
 INC = -I$(OPENCM3_DIR)/include \
       -L$(OPENCM3_DIR)/lib
