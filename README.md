@@ -2,7 +2,7 @@
 
 This repository contains set of "Hello World" (which is usually led blinking in
 the embedded world) examples for Cortex-M microcontrollers using the
-[GCC ARM Embedded][1] toolchain. It's aim is to demonstrate how to use the
+[Arm GNU Toolchain][1]. It's aim is to demonstrate how to use the
 [CM-Makefile][2] template in custom projects.
 
 Although the repository contains pre-configured examples for a few particular
@@ -31,5 +31,5 @@ version.
 
 See `COPYING` and `COPYING.LESSER` for details.
 
-[1]: https://launchpad.net/gcc-arm-embedded
+[1]: https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain
 [2]: https://github.com/adamheinrich/cm-makefile
