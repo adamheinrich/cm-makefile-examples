@@ -10,7 +10,7 @@ INC = -I$(OPENCM3_DIR)/include \
 # Setup the target MCU used with libopencm3
 OPENCM3_DEVICE = stm32f415rgt
 OPENCM3_TARGET = stm32/f4
-DEF = -DSTM32F4
+OPENCM3_DEF = -DSTM32F4
 
 # CPU architecture
 ARCHFLAGS = -mcpu=cortex-m4
